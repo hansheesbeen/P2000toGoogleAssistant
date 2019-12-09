@@ -42,7 +42,7 @@ if not os.path.isfile(local_server+fname):
    tts.save(local_server+fname)
 
 mc = castdevice.media_controller
-mc.play_media(local_server+fname, "audio/mp3")
+mc.play_media("http://"+local_ip+"/mp3_cache/"+fname, "audio/mp3")
 
 mc.block_until_active()
 
